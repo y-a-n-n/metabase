@@ -60,6 +60,8 @@ config:
   security:
     passComplexity: ""
     passLenght: ""
+  email:
+    fromAddress: ""
   
 secrets:
   database:
@@ -71,6 +73,12 @@ secrets:
     port: ""
   config:
     encryptionKey: ""
+  email:
+    host: ""
+    username: ""
+    password: ""
+    port: ""
+    security: ""
 
 resources: {}
 
