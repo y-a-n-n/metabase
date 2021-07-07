@@ -73,12 +73,23 @@ secrets:
     port: ""
   config:
     encryptionKey: ""
+    token: ""
   email:
     host: ""
     username: ""
     password: ""
     port: ""
     security: ""
+  sso:
+    jwt: ""
+  ldap:
+    host: ""
+    port: ""
+    security: ""
+    password: ""
+  cache:
+    backend: ""
+  
 
 resources: {}
 
