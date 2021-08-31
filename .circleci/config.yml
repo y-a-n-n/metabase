@@ -1205,7 +1205,6 @@ workflows:
           name: build-uberjar-drivers
           requires:
             - be-deps
-          <<: *Matrix
 
       - build-uberjar-frontend:
           name: build-uberjar-frontend-<< matrix.edition >>
