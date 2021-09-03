@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import _ from "underscore";
+import { AuditParametersInput } from "./AuditParameters.styled";
 
 const DEBOUNCE_PERIOD = 300;
 
@@ -24,14 +25,14 @@ export default class AuditParameters extends React.Component {
     };
   }
 
-  changeValue = (key: string, value: string) => {
+  changeValue = (key, value) => {
     this.setState({
       inputValues: { ...this.state.inputValues, [key]: value },
     });
     this.commitValueDebounced(key, value);
   };
 
-  commitValueDebounced = _.debounce((key: string, value: string) => {
+  commitValueDebounced = _.debounce((key, value) => {
     this.setState({
       committedValues: { ...this.state.committedValues, [key]: value },
     });
@@ -43,16 +44,16 @@ export default class AuditParameters extends React.Component {
     return (
       <div>
         <div className="pt4">
-          {parameters.map(({ key, placeholder }) => (
-            <input
-              className="input mr2"
+          {parameters.map(({ key, placeholder, icon }) => (
+            <AuditParametersInput
               key={key}
               type="text"
               value={inputValues[key] || ""}
               placeholder={placeholder}
-              onChange={e => {
-                this.changeValue(key, e.target.value);
+              onChange={value => {
+                this.changeValue(key, value);
               }}
+              icon={icon}
             />
           ))}
         </div>
