@@ -75,7 +75,7 @@ The following table lists the configurable parameters of the Metabase chart and 
 | secrets.database.connString        | Database connection URI (alternative to the below settings) | null              |
 | secrets.database.host              | Database host                                               | null              |
 | secrets.database.port              | Database port                                               | null              |
-| secrets.database.dbname            | Database name                                               | null              |
+| secrets.database.dbName            | Database name                                               | null              |
 | secrets.database.username          | Database username                                           | null              |
 | secrets.database.password          | Database password                                           | null              |
 | config.security.passComplexity     | Complexity requirement for Metabase account's password      | normal            |
